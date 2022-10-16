@@ -1,7 +1,9 @@
+@import 'src/index.scss';
+
 ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 li {
@@ -12,6 +14,10 @@ li {
 
   img {
     padding-top: 2px;
+  }
+
+  @include desktop {
+    font-size: 18px;
   }
 }
 
@@ -33,12 +39,14 @@ li:last-child {
 .time {
   width: 63px;
   height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
 
   background: #D9E8FF;
   border-radius: 11px;
+
+  @include desktop {
+    font-size: 16px;
+  }
 
   &:hover {
     cursor: pointer;

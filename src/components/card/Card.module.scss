@@ -1,19 +1,70 @@
+@import 'src/index.scss';
+
 .card {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 
   border: 0.3px solid #828282;
   border-radius: 16px;
+
+  @include desktop {
+    flex-wrap: nowrap;
+    max-width: 1070px;
+  }
 }
 
 .img {
   width: 100%;
+  margin-bottom: 16px;
 
-  margin-bottom: 18px;
+  > img {
+    width: 100%;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+    flex: 1 1 473px;
+
+    > img {
+      height: 100%;
+    }
+  }
 }
 
-.main {
+.additional {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 12px 27px;
+  height: 43px;
+  border-radius: 15px 0 12px;
+  color: white;
+  font-weight: 400;
+  @include flex-center;
+
+  @include desktop {
+    top: 46px;
+    padding: 12px 35px;
+    border-radius: 0;
+    font-size: 16px;
+  }
+}
+
+.content {
   padding: 0 12px;
+
+  @include desktop {
+    flex: 1 4 597px;
+    padding: 16px 17px 26px 22px;
+  }
+}
+
+.head {
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
 }
 
 .time {
@@ -22,30 +73,52 @@
   font-size: 12px;
   margin-bottom: 15px;
   color: #9E9E9E;
+
+  @include desktop {
+    font-size: 14px;
+  }
 }
 
 .title {
   font-weight: 400;
   line-height: 22px;
   margin-bottom: 20px;
+
+  @include desktop {
+    font-weight: 200;
+    font-size: 26px;
+    line-height: 34px;
+    color: #000000;
+    margin-bottom: 11px;
+  }
 }
 
 .footer {
-  padding: 20px;
+  padding: 20px 7px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  @include desktop {
+    padding: 9px 0 0 0;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 130px;
 }
 
 .price {
   font-size: 30px;
   color: black;
   position: relative;
-
-  > div {
-    font-size: 10px;
-  }
 
   &:after {
     position: absolute;
@@ -57,6 +130,26 @@
     height: 23px;
     background: transparent url('../../assets/svg/ruble-currency-sign.png') no-repeat;
   }
+
+  @include desktop {
+    font-size: 36px;
+    &:after {
+      top: -3px;
+      left: 64px;
+      width: 19px;
+      height: 26px;
+      background: transparent url('../../assets/svg/Vector.svg') no-repeat;
+    }
+  }
+}
+
+.pierPrice {
+  font-size: 10px;
+  line-height: 14px;
+
+  @include desktop {
+    font-size: 14px;
+  }
 }
 
 .button {
@@ -66,7 +159,13 @@
   background: #FED74B;
   border: 0.5px solid #CBA500;
   border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
+
+  @include desktop {
+    font-size: 18px;
+    background: #FFD83C;
+    border-radius: 23px;
+    width: 187px;
+    height: 52px;
+  }
 }

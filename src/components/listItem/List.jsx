@@ -21,7 +21,7 @@ const List = ({ timing }) => {
             <li>
                 <img src={Check} alt='check' />
                 <div>
-                    Ближайший рейс сегодня
+                    <span>Ближайший рейс сегодня</span>
                     <div className={styles.timeContainer}>
                         {showMore ? (
                             <>

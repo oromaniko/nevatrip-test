@@ -1,3 +1,5 @@
+@import 'src/index.scss';
+
 *,
 ::after,
 ::before {
@@ -12,10 +14,15 @@ body {
 }
 
 .layout {
-  display: flex;
+  @include flex-center;
   flex-wrap: wrap;
   gap: 30px;
   padding: 27px 16px;
+
+  @include desktop {
+    gap: 60px;
+    padding: 67px 30px;
+  }
 }
 
 button {

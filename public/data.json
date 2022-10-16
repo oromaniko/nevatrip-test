@@ -10,21 +10,21 @@
     "additional": "НОВИНКА",
     "img": {
       "small": "./images/sankt-peterburg-piter-st-3495.png",
-      "large": "./images/sankt-peterburg-piter-st-3495.png"
+      "large": "./images/exc1.png"
     }
   },
   {
     "name": "Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off 2019",
     "duration": "2 часа",
     "timing": [
-      "09:00", "10:00", "11:30", "12:30", "15:00", "15:00", "16:00", "17:00"
+      "09:00", "10:00", "11:30", "12:30", "15:00", "15:00", "16:00"
     ],
     "price": 800,
     "pierPrice": null,
     "additional": "КРУГЛЫЙ ГОД",
     "img": {
       "small": "./images/sankt-peterburg-piter-st-3495.png",
-      "large": "./images/sankt-peterburg-piter-st-3495.png"
+      "large": "./images/exc2.png"
     }
   },
   {
@@ -38,7 +38,7 @@
     "additional": null,
     "img": {
       "small": "./images/sankt-peterburg-piter-st-3495.png",
-      "large": "./images/sankt-peterburg-piter-st-3495.png"
+      "large": "./images/mus.png"
     }
   }
 ]
